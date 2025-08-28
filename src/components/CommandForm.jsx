@@ -1,4 +1,4 @@
-function CommandForm({ input, setInput, logs, setLogs }) {
+function CommandForm({ input, setInput, logs, setLogs, onCommandSubmit }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -13,6 +13,11 @@ function CommandForm({ input, setInput, logs, setLogs }) {
             return;
         }
         setLogs([...logs, newLog])
+        
+        // Call the callback to focus input after command submission
+        if (onCommandSubmit) {
+            onCommandSubmit();
+        }
     }
     return (
         <div className="flex-1">
