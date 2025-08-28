@@ -9,7 +9,6 @@ import Help from "./commands/Help";
 import Experience from "./commands/Experience";
 import Welcome from "./commands/Welcome";
 import Invalid from "./commands/Invalid";
-import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 
 
 function Logs({ logs }) {
@@ -46,7 +45,7 @@ function Logs({ logs }) {
           <div key={Date.now() + Math.round(Math.random() * 1e9)}>
             <div className='flex items-center mt-1 md:mt-3'>
               <p className="text-blue-400 mr-2">maity@portfolio:~$</p>
-              <p className="text-green-500 w-auto min-w-full">{log.command}</p>
+              <p className="text-green-500">{log.command}</p>
             </div>
             <div className="">
               {

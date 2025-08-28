@@ -29,7 +29,7 @@ function RightSidebar() {
         <div className="space-y-2">
           <Logs logs={logs} />
         </div>
-        <div className="flex items-center mt-1 md:mt-3">
+        <div className="flex items-center my-3">
           <p className="text-blue-400 mr-2">maity@portfolio:~$</p>
           <CommandForm
             input={input}
