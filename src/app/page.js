@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <div
-        className="flex flex-col justify-between h-screen w-full bg-black overflow-hidden rounded-md">
+        className="flex flex-col justify-between h-screen w-full font-mono md:font-normal bg-black overflow-hidden rounded-md">
 
         <Header/>
 

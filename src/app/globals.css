@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -64,6 +65,7 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0.004 286.32);
   --input: oklch(0.92 0.004 286.32);
+  --inputtype: oklch(0.985 0 0);
   --ring: oklch(0.705 0.015 286.067);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -119,6 +121,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground text-white;
+    @apply bg-background text-input;
   }
 }

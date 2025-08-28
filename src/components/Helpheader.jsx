@@ -1,15 +1,15 @@
-import commands from '@/lib/commands'
+import { help } from '@/constants/data'
 import React from 'react'
 
-function Helpheader() {
+function HelpHeader() {
   return (
-    <div className='flex text-green-500 border-b-1 border-b-green-500 font-mono text-sm gap-3 p-2'>
+    <div className='hidden md:flex text-green-500 border-b border-b-green-500 font-mono text-sm gap-3 p-2 overflow-auto'>
       {
-        commands.map((c) => {
+        help.map((c, index) => {
             return (
-                <div key={c.command} className='flex gap-3'>
+                <div key={Date.now() + Math.round(Math.random() * 1e9)} className='flex gap-3'>
                     <span>{c.command}</span>
-                    <span>|</span>
+                    { index != help?.length - 1 ? <span>|</span> : null}
                 </div>
             )
         })
@@ -19,4 +19,4 @@ function Helpheader() {
   )
 }
 
-export default Helpheader
+export default HelpHeader
