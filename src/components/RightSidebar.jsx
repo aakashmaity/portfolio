@@ -1,6 +1,7 @@
 "use client";
-import HelpHeader from "./HelpHeader";
+
 import CommandForm from "./CommandForm";
+// import HelpHeader from "./HelpHeader";
 import Logs from "./Logs";
 import { useEffect, useRef, useState, useCallback } from "react";
 
@@ -55,7 +56,7 @@ function RightSidebar() {
 
   return (
     <div className="flex flex-col h-full w-full overflow-hidden">
-      <HelpHeader />
+      {/* <HelpHeader /> */}
 
       {/* Scrollable logs area */}
       <div
