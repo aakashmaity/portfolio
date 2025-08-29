@@ -6,10 +6,8 @@ function Footer() {
 
   const [time, setTime] = useState(null)
   
-  console.log("main time:", time)
   useEffect(() => {
     const interval = setTimeout(() => {
-      console.log("inside interval time:", time)
       setTime(new Date().toLocaleString());
     }, 1000)
 
