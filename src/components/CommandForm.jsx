@@ -1,6 +1,3 @@
-"use client"
-
-import { useState, useEffect } from "react";
 
 function CommandForm({ input, setInput, logs, setLogs, onCommandSubmit }) {
 

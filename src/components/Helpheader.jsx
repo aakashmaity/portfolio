@@ -3,7 +3,7 @@ import React from 'react'
 
 function HelpHeader() {
   return (
-    <div className='hidden md:flex text-green-500 border-b border-b-green-500 font-mono text-sm gap-3 p-2 overflow-auto'>
+    <div className='hidden md:flex text-green-500 border-b border-b-green-500 font-mono gap-3 text-sm py-2 overflow-auto'>
       {
         help.map((c, index) => {
             return (
@@ -14,9 +14,8 @@ function HelpHeader() {
             )
         })
       }
-      
     </div>
   )
 }
 
-export default HelpHeader
+export default HelpHeader;
