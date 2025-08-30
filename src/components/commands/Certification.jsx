@@ -4,7 +4,7 @@ import React from "react";
 
 function Certification() {
   return (
-    <div className="md:mt-4">
+    <div className="mt-3 md:mt-4">
       <p className=" mb-4 md:mb-8">🥇 Certifications:</p>
       <div>
         <p>Technical Certifications: </p>
@@ -17,7 +17,7 @@ function Certification() {
               >
                 <p>
                   - {c.name}{" "}
-                  <Link href={c.link} className=" text-blue-500 cursor-pointer">
+                  <Link href={c.link} className=" text-blue-600 cursor-pointer">
                     Link
                   </Link>
                 </p>

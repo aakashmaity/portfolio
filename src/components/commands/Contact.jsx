@@ -4,7 +4,7 @@ import React from "react";
 
 function Contact() {
   return (
-    <div className="md:mt-4 space-y-4">
+    <div className="mt-3 md:mt-4 space-y-4">
       <p className=" mb-4 md:mb-8">📬 Get in touch:</p>
 
       <div className="space-y-1">

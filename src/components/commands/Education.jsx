@@ -3,7 +3,7 @@ import React from "react";
 
 function Education() {
   return (
-    <div className="md:mt-4 space-y-10">
+    <div className="mt-3 md:mt-4 space-y-10">
       <p className=" mb-4 md:mb-8">🎓 Education:</p>
       <div>
         {education.map((edu) => {

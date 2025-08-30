@@ -3,7 +3,7 @@ import React from "react";
 
 function Welcome() {
   return (
-    <div className="space-y-1 mt-4">
+    <div className="mt-3 md:mt-4 space-y-1">
       <p>{welcome.intro}</p>
       <p>{welcome.description}</p>
 

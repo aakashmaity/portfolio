@@ -3,7 +3,7 @@ import React from "react";
 
 function Skills() {
   return (
-    <div className="md:mt-4 space-y-5">
+    <div className="mt-3 md:mt-4 space-y-5">
       <p className="mb-4 md:mb-8">👩🏻‍💻 Technical Skills:</p>
 
       <div>

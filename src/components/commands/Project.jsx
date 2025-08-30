@@ -4,7 +4,7 @@ import React from "react";
 
 function Project() {
   return (
-    <div className="md:mt-4">
+    <div className="mt-3 md:mt-4">
       <p className=" mb-4 md:mb-8">🚀 Projects:</p>
       <div>
         {projects.map((p) => {
@@ -21,14 +21,14 @@ function Project() {
               <p className=" pl-6">Technologies: {p.technology}</p>
               <p className=" pl-6">
                 GitHub:{" "}
-                <Link href={p.github} className=" text-blue-500 cursor-pointer">
-                  {p.github}
+                <Link href={p.github} className=" text-blue-600 cursor-pointer">
+                  Link
                 </Link>
               </p>
               <p className=" pl-6">
                 Link:{" "}
-                <Link href={p.link} className=" text-blue-500 cursor-pointer">
-                  {p.link}
+                <Link href={p.link} className=" text-blue-600 cursor-pointer">
+                  Live
                 </Link>
               </p>
             </div>
