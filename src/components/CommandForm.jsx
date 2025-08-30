@@ -67,7 +67,7 @@ function CommandForm({ input, setInput, logs, setLogs, onCommandSubmit }) {
                         value={input}
                         onChange={(e) => setInput(e.target.value || "")}
                         onKeyDown={handleKeyUpDown}
-                        className="opacity-0"
+                        className="opacity-0 w-full"
                         autoFocus
                     />
                 </div>
