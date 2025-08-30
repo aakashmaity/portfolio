@@ -84,30 +84,39 @@ export const projects = [
   },
   {
     id: 2,
-    name: "CustFlow",
+    name: "GitBuddy",
     description:
-      "All-in-one ERP and CRM solution designed to streamline business operations through a powerful architecture.",
-    technology: "Vite, React.js, Javascript, Node.js, MongoDB",
-    link: "https://custflow.vercel.app",
-    github: "https://github.com/aakashmaity/custflow",
+      "A Github Assistant telegram bot helps to manage github project repository.",
+    technology: "Express.js , Javascript, Node.js, Telegram bot (GodFather)",
+    link: "http://t.me/github_project_assistant_bot",
+    github: "https://github.com/aakashmaity/github_assistant_telegram_bot",
   },
   {
     id: 3,
-    name: "CustFlow",
+    name: "Student Feedback Management System",
     description:
-      "All-in-one ERP and CRM solution designed to streamline business operations through a powerful architecture.",
-    technology: "Vite, React.js, Javascript, Node.js, MongoDB",
-    link: "https://custflow.vercel.app",
-    github: "https://github.com/aakashmaity/custflow",
+      "A web application to facilitate secure feedbacks, with role-based access control for admins and students, ensuring structured management of feedback workflows.",
+    technology: "Next.js, React.js, Javascript, MongoDB, AWS S3, JWT",
+    link: "https://github.com/aakashmaity/student-feedback-system",
+    github: "https://github.com/aakashmaity/student-feedback-system",
   },
   {
     id: 4,
-    name: "CustFlow",
+    name: "AudioPhile",
     description:
-      "All-in-one ERP and CRM solution designed to streamline business operations through a powerful architecture.",
-    technology: "Vite, React.js, Javascript, Node.js, MongoDB",
-    link: "https://custflow.vercel.app",
-    github: "https://github.com/aakashmaity/custflow",
+      "Ecommerce platform focused on audio products, enabling smooth user journeys from product discovery to secure checkout.",
+    technology: "Next.js, React.js, Javascript, Node.js, MongoDB, AWS S3, JWT, RazorPay API",
+    link: "https://audiophile-client2-0.vercel.app",
+    github: "https://github.com/aakashmaity/audiophile-ecommerce-1.0",
+  },
+  {
+    id: 5,
+    name: "WEmeet",
+    description:
+      "A real-time video conferencing app that enables seamless virtual meetings and collaboration.",
+    technology: "Next.js, React.js, TypeScript, Stream.io, Cleak, Tailwind CSS",
+    link: "https://wemeet-zeta.vercel.app",
+    github: "https://github.com/aakashmaity/wemeet",
   },
 ];
 
@@ -126,8 +135,9 @@ export const certifications = [
     id: 1,
     name: "Fullstack Web Development",
     org: "PW skills",
-    link: "",
+    link: "https://drive.google.com/file/d/1nh5MwAq-GFG-KS8mFn5ezKBdNWTZYLV5/view?usp=sharing",
   },
+
 ];
 
 // Additional Learnings
@@ -145,7 +155,7 @@ export const about = {
   background: [
     "Accomplished internship in Software Engineer at Tata Consultancy Services (TCS)",
     "Graduated from Heritage Institute of Technology, Kolkata in 2025",
-    "Skilled in Next.js, React.js, AWS and SQL",
+    "Skilled in Next.js, React.js, Spring Boot, AWS and SQL",
   ],
 };
 
