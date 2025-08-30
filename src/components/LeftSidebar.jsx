@@ -9,9 +9,8 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
 
 
 extend({ MeshLineGeometry, MeshLineMaterial })
-useGLTF.preload('https://res.cloudinary.com/dlcb33pfi/image/upload/v1756503958/tag_vkvif2.glb')
-useTexture.preload('https://res.cloudinary.com/dlcb33pfi/image/upload/v1756504125/a2599bca-d6b3-4515-a038-dda6f91924f2.png')
-
+useGLTF.preload('https://res.cloudinary.com/dlcb33pfi/image/upload/v1756550152/tag_sdwrjs.glb')
+useTexture.preload('https://res.cloudinary.com/dlcb33pfi/image/upload/v1756557746/Untitled_design_1_q0n537.png')
 function LeftSidebar() {
   return (
     <Canvas camera={{ position: [0, 0, 13], fov: 25 }}>
@@ -38,17 +37,17 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
   const band = useRef(), fixed = useRef(), j1 = useRef(), j2 = useRef(), j3 = useRef(), card = useRef() // prettier-ignore
   const vec = new THREE.Vector3(), ang = new THREE.Vector3(), rot = new THREE.Vector3(), dir = new THREE.Vector3() // prettier-ignore
   const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 2, linearDamping: 2 }
-  const { nodes, materials } = useGLTF('https://res.cloudinary.com/dlcb33pfi/image/upload/v1756503958/tag_vkvif2.glb')
-  const texture = useTexture('https://res.cloudinary.com/dlcb33pfi/image/upload/v1756504125/a2599bca-d6b3-4515-a038-dda6f91924f2.png')
+  const { nodes, materials } = useGLTF('https://res.cloudinary.com/dlcb33pfi/image/upload/v1756550152/tag_sdwrjs.glb')
+  const texture = useTexture('https://res.cloudinary.com/dlcb33pfi/image/upload/v1756557746/Untitled_design_1_q0n537.png')
   const { width, height } = useThree((state) => state.size)
   const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]))
   const [dragged, drag] = useState(false)
   const [hovered, hover] = useState(false)
 
-  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1]) // prettier-ignore
+  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 0.65]) // prettier-ignore
   useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]) // prettier-ignore
-  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1]) // prettier-ignore
-  useSphericalJoint(j3, card, [[0, 0, 0], [0, 1.45, 0]]) // prettier-ignore
+  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 0.65]) // prettier-ignore
+  useSphericalJoint(j3, card, [[0, 0, 0], [0, 2.345, 0]]) // prettier-ignore
 
   useEffect(() => {
     if (hovered) {
@@ -102,16 +101,16 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
           <BallCollider args={[0.1]} />
         </RigidBody>
         <RigidBody position={[2, 0, 0]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
-          <CuboidCollider args={[0.8, 1.125, 0.01]} />
+          <CuboidCollider args={[1, 1.125, 0.01]} />
           <group
-            scale={2.25}
+            scale={3}
             position={[0, -1.2, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={(e) => (e.target.releasePointerCapture(e.pointerId), drag(false))}
             onPointerDown={(e) => (e.target.setPointerCapture(e.pointerId), drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation()))))}>
             <mesh geometry={nodes.card.geometry}>
-              <meshPhysicalMaterial map={materials.base.map} map-anisotropy={16} clearcoat={1} clearcoatRoughness={0.15} roughness={0.3} metalness={0.5} />
+              <meshPhysicalMaterial map={materials.base.map} map-anisotropy={14} clearcoat={1} clearcoatRoughness={0.15} roughness={0.3} metalness={0.5} />
             </mesh>
             <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.3} />
             <mesh geometry={nodes.clamp.geometry} material={materials.metal} />
