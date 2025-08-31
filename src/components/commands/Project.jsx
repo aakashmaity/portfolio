@@ -26,9 +26,9 @@ function Project() {
                 </Link>
               </p>
               <p className=" pl-6">
-                Link:{" "}
+                Live:{" "}
                 <Link href={p.link} className=" text-blue-600 cursor-pointer">
-                  Live
+                  Link
                 </Link>
               </p>
             </div>

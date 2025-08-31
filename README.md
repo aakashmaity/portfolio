@@ -1,1 +1,1 @@
-Portfolio Link - (live)[https://akashmaity.vercel.app]
+Portfolio Link - [live](https://akashmaity.vercel.app)

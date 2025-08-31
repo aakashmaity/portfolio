@@ -126,9 +126,12 @@
 }
 
 
-.cursor {
-  width: 10px;
-  height: 12px;
-  display: inline-block;
-  background-color: darkgoldenrod;
-}
+/* input {
+  transform: scale(10);
+  transform-origin: 0 0;
+  caret-color: #25b925;
+  border: none;
+  font-size: medium;
+  height: fit-content;
+  width: fit-content;
+} */
