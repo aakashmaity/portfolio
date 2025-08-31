@@ -124,3 +124,11 @@
     @apply bg-background text-input;
   }
 }
+
+
+.cursor {
+  width: 10px;
+  height: 12px;
+  display: inline-block;
+  background-color: darkgoldenrod;
+}

@@ -1,18 +1,28 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function CommandForm({ input, setInput, logs, setLogs, onCommandSubmit }) {
 
     const [historyIndex, setHistoryIndex] = useState(-1);
 
 
+    useEffect(() => {
+        console.log(historyIndex);
+        if(historyIndex === -1){
+            setInput("");
+        } else {
+            setInput(logs[historyIndex].command)
+        }
+    }, [historyIndex])
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+        console.log("Submitted")
+
 
         const newLog = {
-            command: input.trim().toLowerCase(),
+            command: input?.trim()?.toLowerCase(),
         }
 
         if (newLog.command === 'clear') {
@@ -29,33 +39,27 @@ function CommandForm({ input, setInput, logs, setLogs, onCommandSubmit }) {
         }
     }
 
-    
-    const handleKeyUpDown = (e) => {
-        // console.log(historyIndex)
-        // if (e?.key === "ArrowUp" && logs.length > 0) {
-        //     const newIndex = historyIndex === -1 ? logs.length - 1 : Math.max(historyIndex - 1, 0);
-        //     setHistoryIndex(newIndex);
-        //     setInput(logs[historyIndex].command || "");
-        // }
 
-        // if (e?.key === "ArrowDown" && logs.length > 0) {
-        //     if(logs.length > 0 && historyIndex !== -1){
-        //         const newIndex = historyIndex + 1;
-        //         if(newIndex >= logs.length){
-        //             setHistoryIndex(-1);
-        //             setInput("")
-        //         } else {
-        //             setHistoryIndex(newIndex);
-        //             setInput(logs[historyIndex].command || "");
-        //         }
-        //     }
-        // }
+    const handleKeyUpDown = async (e) => {
+        if (e?.key?.toLowerCase() === "enter") {
+            handleSubmit(e);
+        }
+
+        if (e?.key?.toLowerCase() === "arrowup") {
+            e.preventDefault();
+            setHistoryIndex((prev) => prev === -1 ? logs.length - 1 : Math.max(prev - 1, 0));
+        }
+
+        if (e?.key?.toLowerCase() === "arrowdown") {
+            e.preventDefault();
+            setHistoryIndex((prev) => Math.min(prev + 1, logs.length - 1));
+        }
     }
 
 
     return (
         <div className="flex-1 w-full">
-            <form onSubmit={handleSubmit}>
+            <form>
                 <div className="flex items-center w-full">
                     <span>{input}</span>
                     <span

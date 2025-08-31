@@ -11,11 +11,11 @@ function useAutoScroll(deps) {
   
   useEffect(() => {
     const scrollToBottom = () => {
-      const el = scrollRef.current;
+      const el = scrollRef?.current;
       if (!el) return;
       
-      el.scrollTo({ 
-        top: el.scrollHeight, 
+      el?.scrollTo({ 
+        top: el?.scrollHeight, 
         behavior: "smooth" 
       });
     };
@@ -32,8 +32,8 @@ function useInputFocus() {
     const focusAndScroll = () => {
       const input = document.getElementById('terminal');
       if (input) {
-        input.focus();
-        input.scrollIntoView({ 
+        input?.focus();
+        input?.scrollIntoView({ 
           block: 'start' 
         });
       }
