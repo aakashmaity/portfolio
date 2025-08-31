@@ -8,7 +8,6 @@ function CommandForm({ input, setInput, logs, setLogs, onCommandSubmit }) {
 
 
     useEffect(() => {
-        console.log(historyIndex);
         if(historyIndex === -1){
             setInput("");
         } else {
@@ -18,8 +17,6 @@ function CommandForm({ input, setInput, logs, setLogs, onCommandSubmit }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Submitted")
-
 
         const newLog = {
             command: input?.trim()?.toLowerCase(),
@@ -27,11 +24,13 @@ function CommandForm({ input, setInput, logs, setLogs, onCommandSubmit }) {
 
         if (newLog.command === 'clear') {
             setLogs([]);
+            setHistoryIndex(-1)
+            setInput("")
             return;
         }
         setLogs([...logs, newLog])
         setHistoryIndex(-1)
-        setInput('')
+        setInput("")
 
         // Call the callback to focus input after command submission
         if (onCommandSubmit) {
