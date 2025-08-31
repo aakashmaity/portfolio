@@ -10,11 +10,11 @@ function Help() {
           return (
             <div
               key={Date.now() + Math.round(Math.random() * 1e9)}
-              className="flex space-y-1"
+              className="flex space-y-1 items-center"
             >
-              <p className="">{h.command}</p>
-              <p className="md:mx-4">-</p>
-              <p className="">{h.description}</p>
+              <span className="pr-3 md:w-[150px]">{h.command}</span>
+              <span className="pr-2  md:w-[50px] content-center">-</span>
+              <span className="">{h.description}</span>
             </div>
           );
         })}
